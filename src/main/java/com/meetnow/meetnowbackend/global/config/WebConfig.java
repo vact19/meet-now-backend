@@ -1,4 +1,4 @@
-package com.meetnow.meetnowbackend.config;
+package com.meetnow.meetnowbackend.global.config;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Configuration;
