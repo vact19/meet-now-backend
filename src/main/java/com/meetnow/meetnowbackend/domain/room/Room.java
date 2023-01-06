@@ -1,17 +1,19 @@
 package com.meetnow.meetnowbackend.domain.room;
 
+import com.meetnow.meetnowbackend.domain.timetable.TimeTable;
 import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
-import java.time.LocalDateTime;
+import java.time.LocalDate;
+
 
 
 @Getter
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @Entity
-public class Room {
+public class Room extends TimeTable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -23,24 +25,13 @@ public class Room {
     @Column(name = "appointment_Hour", length = 3, nullable = false)
     private Short appointmentHour;
 
-    // Todo 방의 약속시작 - 종료시간은 개인의 약속시작 - 종료시간과 다른가?
+    // StartDate와 endDate는 해당 방에서 잡을 수 있는 약속시간의 범위
     @Column(name = "start_time", length = 30, nullable = false)
-    private LocalDateTime startTime;
+    private LocalDate startDate;
 
     @Column(name = "end_time", length = 30, nullable = false)
-    private LocalDateTime endTime;
+    private LocalDate endDate;
 }
-
-
-
-
-
-
-
-
-
-
-
 
 
 

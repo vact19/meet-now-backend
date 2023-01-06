@@ -1,4 +1,4 @@
-package com.meetnow.meetnowbackend.domain.time;
+package com.meetnow.meetnowbackend.domain.appointmentdate;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;

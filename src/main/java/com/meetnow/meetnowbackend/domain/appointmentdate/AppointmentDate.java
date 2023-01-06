@@ -1,4 +1,4 @@
-package com.meetnow.meetnowbackend.domain.time;
+package com.meetnow.meetnowbackend.domain.appointmentdate;
 
 import com.meetnow.meetnowbackend.domain.timetable.TimeTable;
 import lombok.AccessLevel;
@@ -22,6 +22,7 @@ public class AppointmentDate {
     @Column(name = "date", nullable = false)
     private LocalDate date;
 
+    // appoStart와 appoEnd는 방에 소속된 사용자가 등록한 시간
     @Column(name = "appo_start", nullable = false)
     private LocalTime appoStart;
 
