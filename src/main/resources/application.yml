@@ -1,0 +1,37 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /
+
+spring:
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+
+
+  datasource:
+    url: jdbc:mysql://localhost:3307/meetnow # ???? ??. ?? 3306?? mysql server ???? ?? ?.
+    username: root
+    password:  # ?? ??? ?
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: create
+
+    properties:
+      hibernate:
+        format_sql : true # sql ??? ??
+        default_batch_fetch_size: 1000
+
+    show-sql: true  # sql ??
+    open-in-view: false
+
+logging:
+  level:
+    org.hibernate.type: trace
+
+token:
+  secret:  # ??? ?
+#  access-token-expiration-time:
+
