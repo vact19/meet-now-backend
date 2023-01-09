@@ -26,10 +26,10 @@ public class Room extends TimeTable {
     private Short appointmentHour;
 
     // StartDate와 endDate는 해당 방에서 잡을 수 있는 약속시간의 범위
-    @Column(name = "start_time", length = 30, nullable = false)
+    @Column(name = "start_date", length = 30, nullable = false)
     private LocalDate startDate;
 
-    @Column(name = "end_time", length = 30, nullable = false)
+    @Column(name = "end_date", length = 30, nullable = false)
     private LocalDate endDate;
 }
 
